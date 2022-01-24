@@ -28,6 +28,10 @@ class ResponseEmitter extends SlimResponseEmitter
             ->withAddedHeader('Cache-Control', 'post-check=0, pre-check=0')
             ->withHeader('Pragma', 'no-cache');
 
+        if (!$response->hasHeader('Content-Type')) {
+            $response = $response->withHeader('Content-Type', 'application/json');
+        }
+
         if (ob_get_contents()) {
             ob_clean();
         }
