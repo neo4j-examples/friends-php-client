@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 use App\Application\Actions\User\ListUsersAction;
 use App\Application\Actions\User\ViewUserAction;
+use App\Application\Controllers\FriendsController;
+use App\Application\Controllers\UserController;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\App;
@@ -19,8 +21,14 @@ return function (App $app) {
         return $response;
     });
 
-    $app->group('/users', function (Group $group) {
-        $group->get('', ListUsersAction::class);
-        $group->get('/{id}', ViewUserAction::class);
-    });
+    $app->get('/users', [UserController::class, 'listUsers']);
+    $app->get('/user', [UserController::class, 'getUser']);
+    $app->post('/user', [UserController::class, 'createUser']);
+    $app->delete('/user', [UserController::class, 'deleteUser']);
+
+    $app->get('/friends/distance', [FriendsController::class, 'distance']);
+    $app->get('/user/friends', [FriendsController::class, 'listFriends']);
+    $app->put('/user/friend', [FriendsController::class, 'makeFriends']);
+    $app->delete('/user/friend', [FriendsController::class, 'breakupFriends']);
+
 };
