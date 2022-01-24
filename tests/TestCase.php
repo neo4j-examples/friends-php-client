@@ -19,6 +19,7 @@ use Slim\Psr7\Factory\StreamFactory;
 use Slim\Psr7\Headers;
 use Slim\Psr7\Request as SlimRequest;
 use Slim\Psr7\Uri;
+use function file_exists;
 
 class TestCase extends PHPUnit_TestCase
 {
@@ -77,7 +78,9 @@ class TestCase extends PHPUnit_TestCase
         $errorMiddleware = $app->addErrorMiddleware($displayErrorDetails, $logError, $logErrorDetails);
         $errorMiddleware->setDefaultErrorHandler($errorHandler);
 
-        Dotenv::createImmutable(__DIR__.'/../')->safeLoad();
+        if (file_exists(__DIR__.'/../.env')) {
+            Dotenv::createImmutable(__DIR__ . '/../')->safeLoad();
+        }
 
         return $app;
     }
