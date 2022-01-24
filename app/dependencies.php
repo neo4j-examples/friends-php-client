@@ -14,7 +14,7 @@ use Psr\Log\LoggerInterface;
 return function (ContainerBuilder $containerBuilder) {
     $containerBuilder->addDefinitions([
         Session::class => function () {
-            return Driver::create($_ENV['NEO4J_URI'])->createSession();
+            return Driver::create($_ENV['NEO4J_URI'] ?? 'bolt://neo4j:test@localhost')->createSession();
         },
 
         LoggerInterface::class => function (ContainerInterface $c) {

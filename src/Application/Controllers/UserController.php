@@ -2,8 +2,8 @@
 
 namespace App\Application\Controllers;
 
+use App\Domain\Uuid;
 use Laudis\Neo4j\Basic\Session;
-use Neo4j\Domain\Uuid;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Slim\Exception\HttpNotFoundException;
