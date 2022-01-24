@@ -1,6 +1,6 @@
 <?php
 
-namespace Neo4j\Domain;
+namespace App\Domain;
 
 use JsonSerializable;
 use function random_bytes;
