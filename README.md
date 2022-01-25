@@ -15,4 +15,4 @@ The live stream using the API can be found here: https://www.youtube.com/watch?v
 
 ## Basic CLI examples
 
-The scripts/ folder also includes examples on how the driver and and client works.%      
+The scripts/ folder also includes examples on how the driver and and client works.
