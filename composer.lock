@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3b87a32a2fbd41ca369fbf63e7bb3aee",
+    "content-hash": "a0cb590704f8dcd8685770045551e480",
     "packages": [
         {
             "name": "clue/stream-filter",
@@ -192,16 +192,16 @@
         },
         {
             "name": "laudis/neo4j-php-client",
-            "version": "2.4.4",
+            "version": "2.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neo4j-php/neo4j-php-client.git",
-                "reference": "14d32da86e72e8f66503a58763eb241e8a47ac91"
+                "reference": "fe4856893d58284822638a4bebb2529619868201"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neo4j-php/neo4j-php-client/zipball/14d32da86e72e8f66503a58763eb241e8a47ac91",
-                "reference": "14d32da86e72e8f66503a58763eb241e8a47ac91",
+                "url": "https://api.github.com/repos/neo4j-php/neo4j-php-client/zipball/fe4856893d58284822638a4bebb2529619868201",
+                "reference": "fe4856893d58284822638a4bebb2529619868201",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
                 "psr/http-message": "^1.0",
-                "stefanak-michal/bolt": "^3.1.1",
+                "stefanak-michal/bolt": "^3.1.2",
                 "symfony/polyfill-php80": "^1.2"
             },
             "require-dev": {
@@ -230,7 +230,7 @@
                 "psr/container": "^1.1",
                 "psr/log": "^1.1",
                 "symfony/uid": "^5.0",
-                "vimeo/psalm": "^4.13.0",
+                "vimeo/psalm": "^4.20",
                 "vlucas/phpdotenv": "^5.0"
             },
             "suggest": {
@@ -266,9 +266,9 @@
             ],
             "support": {
                 "issues": "https://github.com/neo4j-php/neo4j-php-client/issues",
-                "source": "https://github.com/neo4j-php/neo4j-php-client/tree/2.4.4"
+                "source": "https://github.com/neo4j-php/neo4j-php-client/tree/2.5.2"
             },
-            "time": "2022-02-06T15:12:58+00:00"
+            "time": "2022-03-15T14:03:55+00:00"
         },
         {
             "name": "laudis/typed-enum",
@@ -1583,16 +1583,16 @@
         },
         {
             "name": "stefanak-michal/bolt",
-            "version": "v3.1.1",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neo4j-php/Bolt.git",
-                "reference": "3c34bf785ca0b7f056e2430c01dc7af40cd4b3fb"
+                "reference": "350a15cb8eeded9b908380cdee5fa10285470a10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neo4j-php/Bolt/zipball/3c34bf785ca0b7f056e2430c01dc7af40cd4b3fb",
-                "reference": "3c34bf785ca0b7f056e2430c01dc7af40cd4b3fb",
+                "url": "https://api.github.com/repos/neo4j-php/Bolt/zipball/350a15cb8eeded9b908380cdee5fa10285470a10",
+                "reference": "350a15cb8eeded9b908380cdee5fa10285470a10",
                 "shasum": ""
             },
             "require": {
@@ -1603,6 +1603,7 @@
                 "phpunit/phpunit": ">=7.5.0"
             },
             "suggest": {
+                "ext-openssl": "Needed when using StreamSocket connection class with SSL",
                 "ext-sockets": "Needed when using the Bolt\\connection\\Socket",
                 "laudis/neo4j-php-client": "Neo4j-PHP-Client is the most advanced PHP Client for Neo4j"
             },
@@ -1637,11 +1638,11 @@
             },
             "funding": [
                 {
-                    "url": "https://www.paypal.me/MichalStefanak",
-                    "type": "paypal"
+                    "url": "https://ko-fi.com/michalstefanak",
+                    "type": "ko-fi"
                 }
             ],
-            "time": "2022-01-15T23:14:31+00:00"
+            "time": "2022-03-02T15:38:53+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1810,16 +1811,16 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9"
+                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/57b712b08eddb97c762a8caa32c84e037892d2e9",
-                "reference": "57b712b08eddb97c762a8caa32c84e037892d2e9",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/4407588e0d3f1f52efb65fbe92babe41f37fe50c",
+                "reference": "4407588e0d3f1f52efb65fbe92babe41f37fe50c",
                 "shasum": ""
             },
             "require": {
@@ -1873,7 +1874,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -1889,7 +1890,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-09-13T13:58:33+00:00"
+            "time": "2022-03-04T08:16:47+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
