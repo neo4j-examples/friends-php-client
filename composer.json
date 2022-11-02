@@ -17,7 +17,7 @@
         "php-di/php-di": "^6.3",
         "slim/psr7": "^1.5",
         "slim/slim": "^4.10",
-        "vlucas/phpdotenv": "^5.4"
+        "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
         "jangregor/phpstan-prophecy": "^1.0.0",
