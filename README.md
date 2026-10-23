@@ -9,7 +9,7 @@ The live stream using the API can be found here: https://www.youtube.com/watch?v
 
 ## Requirements
 
-- PHP 8.1 or newer with the `curl`, `json` and `mbstring` extensions
+- PHP 8.2.35+, 8.3.36+, 8.4.27+ or 8.5.12+ with the `curl`, `json` and `mbstring` extensions. Earlier patch releases are vulnerable to CVE-2026-109618 and CVE-2026-109619, and `composer install` refuses to run on them.
 - Composer 2
 - A Neo4j database (tested with Neo4j 4.4 and 5)
 
