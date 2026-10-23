@@ -23,7 +23,7 @@ final class FriendsController
         RETURN  collect({id: friend.id, firstName: friend.firstName, secondName: friend.secondName}) AS friends
         CYPHER, $request->getQueryParams());
 
-        $response->getBody()->write($users->getResults());
+        $response->getBody()->write(json_encode($users->first()->get('friends'), JSON_THROW_ON_ERROR));
 
         return $response;
     }

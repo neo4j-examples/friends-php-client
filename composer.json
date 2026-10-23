@@ -10,13 +10,13 @@
     "homepage": "http://github.com/slimphp/Slim-Skeleton",
     "license": "MIT",
     "require": {
-        "php": "^8.0",
+        "php": "~8.2.35 || ~8.3.36 || ~8.4.27 || ^8.5.12",
         "ext-json": "*",
-        "laudis/neo4j-php-client": "^2.8",
+        "laudis/neo4j-php-client": "^3.7",
         "monolog/monolog": "^2.5",
-        "php-di/php-di": "^6.3",
-        "slim/psr7": "^1.5",
-        "slim/slim": "^4.10",
+        "php-di/php-di": "^7.1",
+        "slim/psr7": "^1.6.1",
+        "slim/slim": "^4.15.2",
         "vlucas/phpdotenv": "^5.5"
     },
     "require-dev": {
@@ -24,14 +24,18 @@
         "phpspec/prophecy-phpunit": "^2.0",
         "phpstan/extension-installer": "^1.1.0",
         "phpstan/phpstan": "^1.8",
-        "phpunit/phpunit": "^9.5.20",
-        "squizlabs/php_codesniffer": "^3.6"
+        "phpunit/phpunit": "^9.6.33",
+        "squizlabs/php_codesniffer": "^3.13.6"
     },
     "config": {
         "process-timeout": 0,
         "sort-packages": true,
         "allow-plugins": {
+            "php-http/discovery": true,
             "phpstan/extension-installer": true
+        },
+        "platform": {
+            "php": "8.2.35"
         }
     },
     "autoload": {
@@ -46,6 +50,7 @@
     },
     "scripts": {
         "start": "php -S localhost:8080 -t public",
-        "test": "phpunit"
+        "test": "phpunit",
+        "post-install-cmd": "@composer check-platform-reqs"
     }
 }

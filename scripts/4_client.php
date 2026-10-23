@@ -17,7 +17,6 @@ $driver = Driver::create($_ENV['NEO4J_URI']);
 $client = ClientBuilder::create()
     ->withDriver('bolt', 'bolt://neo4j:test@localhost')
     ->withDriver('neo4j', 'neo4j://neo4j:test@localhost', Authenticate::disabled())
-    ->withDriver('http', 'http://localhost?database=MyDatabase', Authenticate::basic('neo4j', 'test'))
     ->withDriver('oidc', 'bolt://localhost', Authenticate::basic('neo4j', 'test'))
     ->withDriver('default', $_ENV['NEO4J_URI'])
     ->withDefaultDriverConfiguration(DriverConfiguration::default()->withUserAgent('MyAmazingApp9000'))
@@ -25,9 +24,14 @@ $client = ClientBuilder::create()
     ->build();
 
 
-$aliases = ['bolt', 'neo4j', 'http', 'oidc', 'default'];
+$aliases = ['bolt', 'neo4j', 'oidc', 'default'];
 foreach ($aliases as $alias) {
-    $driver = $client->getDriver($alias);
+    try {
+        $driver = $client->getDriver($alias);
+    } catch (RuntimeException) {
+        echo 'Cannot connect with driver: ' . $alias . PHP_EOL;
+        continue;
+    }
     echo 'Found driver with class: ' . $driver::class . PHP_EOL;
     if ($driver->verifyConnectivity()) {
         echo 'Can connect with driver: ' . $alias . PHP_EOL;

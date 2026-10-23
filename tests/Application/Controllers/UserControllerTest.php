@@ -5,6 +5,7 @@ namespace Tests\Application\Controllers;
 use Laudis\Neo4j\Basic\Session;
 use Psr\Http\Message\ResponseInterface;
 use Tests\TestCase;
+use function array_column;
 use function json_decode;
 
 class UserControllerTest extends TestCase
@@ -68,7 +69,7 @@ class UserControllerTest extends TestCase
      */
     public function testDeleteUser(): void
     {
-        $id = $this->fetchId();
+        $id = $this->fetchId('b');
 
         $request = $this->createRequest('DELETE', '/user')->withQueryParams(['id' => $id]);
         $response = $this->getAppInstance()->handle($request);
@@ -92,7 +93,7 @@ class UserControllerTest extends TestCase
      */
     public function testActualUser(): void
     {
-        $id = $this->fetchId();
+        $id = $this->fetchId('d');
         $request = $this->createRequest('GET', '/user')->withQueryParams(['id' => $id]);
         $response = $this->getAppInstance()->handle($request);
 
@@ -111,7 +112,7 @@ class UserControllerTest extends TestCase
         $this->assertEqualsCanonicalizing($expected, $transformer($body));
     }
 
-    private function fetchId(): string
+    private function fetchId(string $secondName): string
     {
         $request = $this->createRequest('GET', '/users');
         $response = $this->getAppInstance()->handle($request);
@@ -119,6 +120,6 @@ class UserControllerTest extends TestCase
         $response->getBody()->rewind();
         $body = json_decode($response->getBody()->getContents(), true, 512, JSON_THROW_ON_ERROR);
 
-        return $body[0]['id'];
+        return array_column($body, 'id', 'secondName')[$secondName];
     }
 }
