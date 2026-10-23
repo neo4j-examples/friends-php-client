@@ -13,7 +13,7 @@
         "php": "~8.2.35 || ~8.3.36 || ~8.4.27 || ^8.5.12",
         "ext-json": "*",
         "laudis/neo4j-php-client": "^3.7",
-        "monolog/monolog": "^2.5",
+        "monolog/monolog": "^3.12",
         "php-di/php-di": "^7.1",
         "slim/psr7": "^1.6.1",
         "slim/slim": "^4.15.2",
