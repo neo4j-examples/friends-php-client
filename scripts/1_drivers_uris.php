@@ -22,10 +22,6 @@ $boltDriver = Driver::create('bolt://neo4j:test@localhost');
 // with the custom port 7777
 $neo4jDriver = Driver::create(uri: 'neo4j://localhost:7777', authenticate: Authenticate::disabled());
 
-// Creates a http driver with credentials neo4j and password test on the default port 7474
-// and on database MyDatabase
-$http = Driver::create(uri: 'http://localhost?database=MyDatabase', authenticate: Authenticate::basic('neo4j', 'test'));
-
 // Creates a bolt driver with disabled authentication on default port 7687
 // and with custom user agent MyAmazingApp 9000
 $oidcDriver = Driver::create(

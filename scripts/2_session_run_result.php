@@ -42,7 +42,7 @@ CYPHER);
 
 summarise($result);
 
-// Working with multiple statements at once is especially beneficial when working with the HTTP protocol
+// Multiple statements can be run at once
 // The SummarizedResults are no first wrapped in a CypherList
 $results = $session->runStatements([
     Statement::create('MATCH (x) RETURN x'),
@@ -64,7 +64,7 @@ function summarise(SummarizedResult $result): void
     $counters = $summary->getCounters();
     echo PHP_EOL . '--------------------------------------' . PHP_EOL;
     echo 'Ran query: ' . PHP_EOL . $summary->getStatement()->getText() . PHP_EOL.PHP_EOL;
-    echo 'Results available after (in ms): ' . round(1000 * $summary->getResultAvailableAfter()) . PHP_EOL;
+    echo 'Results available after (in ms): ' . $summary->getResultAvailableAfter() . PHP_EOL;
     echo 'Query was of type: ' . $summary->getQueryType() . PHP_EOL;
     echo 'Query was run on type: ' . $summary->getServerInfo()->getAddress() . PHP_EOL;
 

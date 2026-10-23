@@ -1,11 +1,11 @@
 <?php
 
+use App\Domain\Uuid;
 use Dotenv\Dotenv;
-use Neo4j\FriendsApiExample\Uuid;
 use Laudis\Neo4j\Basic\Driver;
 use Laudis\Neo4j\Contracts\TransactionInterface;
 use Laudis\Neo4j\Databags\SummarizedResult;
-use Laudis\Neo4j\Exception\Neo4jException;
+use Laudis\Neo4j\Exception\TransactionException;
 use Laudis\Neo4j\ParameterHelper;
 
 require __DIR__ . '/../vendor/autoload.php';
@@ -24,8 +24,7 @@ $tsx->rollback();
 
 try {
     $tsx->commit();
-} catch (Neo4jException $e) {
-    // This gets improved in the next minor version release
+} catch (TransactionException $e) {
     echo $e->getMessage() . PHP_EOL;
 }
 
@@ -40,8 +39,8 @@ $results = $session->transaction(static function (TransactionInterface $tsx) {
     return $tsx->run('CREATE (x:Node {test: "'. $test .'"}) RETURN x');
 });
 
-$node = $results->getAsCypherMap(0)->getAsNode(0);
-if ($node->getProperties()->isEmpty() && !$session->run('MATCH (x:Node) RETURN x')->isEmpty()) {
+$node = $results->getAsCypherMap(0)->getAsNode('x');
+if (!$node->getProperties()->isEmpty() && !$session->run('MATCH (x:Node) RETURN x')->isEmpty()) {
     echo 'Node sucessfully created' . PHP_EOL;
 }
 
