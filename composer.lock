@@ -253,16 +253,16 @@
         },
         {
             "name": "laudis/neo4j-php-client",
-            "version": "3.7.0",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/neo4j-php/neo4j-php-client.git",
-                "reference": "1f566f68067f2f9a9ebeb60d20b12f0a3ca11736"
+                "reference": "d6d90e436689699803ce7132da796dc22f8c39cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/neo4j-php/neo4j-php-client/zipball/1f566f68067f2f9a9ebeb60d20b12f0a3ca11736",
-                "reference": "1f566f68067f2f9a9ebeb60d20b12f0a3ca11736",
+                "url": "https://api.github.com/repos/neo4j-php/neo4j-php-client/zipball/d6d90e436689699803ce7132da796dc22f8c39cb",
+                "reference": "d6d90e436689699803ce7132da796dc22f8c39cb",
                 "shasum": ""
             },
             "require": {
@@ -334,9 +334,9 @@
             ],
             "support": {
                 "issues": "https://github.com/neo4j-php/neo4j-php-client/issues",
-                "source": "https://github.com/neo4j-php/neo4j-php-client/tree/3.7.0"
+                "source": "https://github.com/neo4j-php/neo4j-php-client/tree/3.7.1"
             },
-            "time": "2026-10-21T16:17:19+00:00"
+            "time": "2026-10-22T07:00:08+00:00"
         },
         {
             "name": "laudis/typed-enum",
@@ -1555,16 +1555,16 @@
         },
         {
             "name": "stefanak-michal/bolt",
-            "version": "v7.5.0",
+            "version": "v7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stefanak-michal/php-bolt-driver.git",
-                "reference": "ff63a863b8aa53dd983852b56203654e811e44d1"
+                "reference": "020a62700abef131ae44fd0ab3adf624f0549a68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stefanak-michal/php-bolt-driver/zipball/ff63a863b8aa53dd983852b56203654e811e44d1",
-                "reference": "ff63a863b8aa53dd983852b56203654e811e44d1",
+                "url": "https://api.github.com/repos/stefanak-michal/php-bolt-driver/zipball/020a62700abef131ae44fd0ab3adf624f0549a68",
+                "reference": "020a62700abef131ae44fd0ab3adf624f0549a68",
                 "shasum": ""
             },
             "require": {
@@ -1621,7 +1621,7 @@
                     "type": "ko-fi"
                 }
             ],
-            "time": "2026-10-20T13:34:25+00:00"
+            "time": "2026-10-29T11:03:42+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1708,16 +1708,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.43.0",
+            "version": "v1.43.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72"
+                "reference": "122889ed24dc000165bcbfd77ec412f15cbdfc6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
-                "reference": "4d5d331bf731e0aedbc6b2f5e61135b7b7996a72",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/122889ed24dc000165bcbfd77ec412f15cbdfc6a",
+                "reference": "122889ed24dc000165bcbfd77ec412f15cbdfc6a",
                 "shasum": ""
             },
             "require": {
@@ -1769,7 +1769,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.43.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.43.3"
             },
             "funding": [
                 {
@@ -1789,7 +1789,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-09-24T15:19:04+00:00"
+            "time": "2026-10-28T09:35:49+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
@@ -1877,16 +1877,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.7.0",
+            "version": "v5.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpdotenv/phpdotenv.git",
-                "reference": "301c07936b16d88628b126b01d082ba153cf4c40"
+                "reference": "96149103e62ac67e915f6d2ef59b72dee2e011e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpdotenv/phpdotenv/zipball/301c07936b16d88628b126b01d082ba153cf4c40",
-                "reference": "301c07936b16d88628b126b01d082ba153cf4c40",
+                "url": "https://api.github.com/repos/phpdotenv/phpdotenv/zipball/96149103e62ac67e915f6d2ef59b72dee2e011e0",
+                "reference": "96149103e62ac67e915f6d2ef59b72dee2e011e0",
                 "shasum": ""
             },
             "require": {
@@ -1913,7 +1913,7 @@
                     "forward-command": false
                 },
                 "branch-alias": {
-                    "dev-master": "5.6-dev"
+                    "dev-master": "5.8-dev"
                 }
             },
             "autoload": {
@@ -1944,8 +1944,8 @@
                 "environment"
             ],
             "support": {
-                "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.7.0"
+                "issues": "https://github.com/phpdotenv/phpdotenv/issues",
+                "source": "https://github.com/phpdotenv/phpdotenv/tree/v5.8.0"
             },
             "funding": [
                 {
@@ -1957,7 +1957,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-08-24T18:07:49+00:00"
+            "time": "2026-10-25T16:26:19+00:00"
         }
     ],
     "packages-dev": [
@@ -4452,5 +4452,5 @@
     "platform-overrides": {
         "php": "8.2.35"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
